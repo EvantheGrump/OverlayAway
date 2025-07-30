@@ -8,6 +8,9 @@ jobs:
   pack-job:
     runs-on: ubuntu-latest
     steps:
+
+      - name: Install Dependencies
+        run: pnpm i --frozen-lockfile
       
       - name: Minecraft pack-format updater
         uses: meza/action-minecraft-pack-versions@v1.0.1
