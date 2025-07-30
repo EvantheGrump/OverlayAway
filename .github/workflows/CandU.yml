@@ -12,6 +12,8 @@ jobs:
       - uses: pnpm/action-setup@v4       
         with:
           version: 10
+          package_json_file: pnpm-lock.json
+          
       
       - name: Minecraft pack-format updater
         uses: meza/action-minecraft-pack-versions@v1.0.1
