@@ -1,8 +1,8 @@
 name: Pack Resource Pack
-
 on:
   release:
     types: [published]
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   pack-job:
