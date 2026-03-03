@@ -14,5 +14,5 @@ jobs:
         with:
           output_path: 'formats.json'
           commit_enabled: true
-          github_token: ${{ github.token }}
-          cutoff_version: '1.21.1'
+          github_token: ${{ secrets.TOKEN_GITHUB }}
+          cutoff_version: '1.21.10'
