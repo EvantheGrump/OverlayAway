@@ -7,9 +7,16 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-
+    
+      - name: Update pack formats
+        id: update-formats
+        uses: meza/action-minecraft-pack-versions@v1
+        with:
+          output_path: 'formats.json'
+          
       - name: Build & Upload Packs
         uses: Sindercube/Packr@v2
+        if:
         with:
 
           filename: packr.yml
