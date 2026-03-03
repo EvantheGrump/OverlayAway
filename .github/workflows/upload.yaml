@@ -13,23 +13,3 @@ jobs:
         uses: meza/action-minecraft-pack-versions@v1.0.24        
         with:
           output_path: 'formats.json'
-          
-      - name: Build & Upload Packs
-        uses: Sindercube/Packr@v2
-        if:
-        with:
-
-          filename: packr.yml
-
-          modrinth-id: 'xxxxxxxx'
-          curseforge-id: '000000'
-          github-repo: ${{ github.event.repository.full_name }}
-
-          release-name: ${{ github.event.release.name }}
-          release-version: ${{ github.event.release.tag_name }}
-          changelog: ${{ github.event.release.body }}
-          prerelease: ${{ github.event.release.prerelease }}
-
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          modrinth-token: ${{ secrets.MODRINTH_TOKEN }} # https://modrinth.com/settings/account
-          curseforge-token: ${{ secrets.CURSEFORGE_API_TOKEN }} # https://www.curseforge.com/account/api-tokens
