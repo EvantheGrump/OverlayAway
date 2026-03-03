@@ -10,7 +10,7 @@ jobs:
     
       - name: Update pack formats
         id: update-formats
-        uses: meza/action-minecraft-pack-versions@v1
+        uses: meza/action-minecraft-pack-versions@v1.0.24        
         with:
           output_path: 'formats.json'
           
